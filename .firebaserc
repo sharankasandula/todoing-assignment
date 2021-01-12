@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "stanplus-todoing": {
+      "hosting": {
+        "ngx-admin-demo": [
+          "stanplus-todoing"
+        ]
+      }
+    }
+  }
+}

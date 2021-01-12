@@ -21,6 +21,8 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import {FormsModule} from '@angular/forms';
+import {environment} from '../environments/environment';
+import {AngularFireModule} from '@angular/fire';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +34,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   bootstrap: [AppComponent],
 })

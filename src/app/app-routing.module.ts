@@ -1,27 +1,27 @@
 import {ExtraOptions, RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {LoginFormComponent} from './pages/auth/login-form/login-form.component';
-import {AuthComponent} from './pages/auth/auth.component';
+import {PagesComponent} from './pages/pages.component';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: DashboardComponent,
-  // },
-  // {
-  //   path: 'login',
-  //   component: LoginFormComponent,
-  // },
   {
-    path: '',
+    path: 'auth',
     loadChildren: () => import('./pages/auth/auth.module')
       .then(m => m.AuthModule),
   },
   {
-    path: 'register',
-    component: LoginFormComponent,
+    path: '',
+    component: PagesComponent,
   },
-  // { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  {
+    path: 'login',
+    redirectTo: 'auth/login'
+  },
+  {
+    path: 'register',
+    redirectTo: 'auth/register'
+  },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 const config: ExtraOptions = {

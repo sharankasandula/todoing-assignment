@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {NbAuthService} from '@nebular/auth';
+import { AngularFireAuth } from '@angular/fire/auth';
 import {Router} from '@angular/router';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'ngx-login-form',
@@ -17,11 +16,8 @@ export class LoginFormComponent implements OnInit {
   messages: string[] = [];
   user: any = {};
   submitted: boolean = false;
-  rememberMe = false;
-  loginForm: FormGroup;
 
-  constructor(protected service: NbAuthService,
-              protected router: Router) {
+  constructor(protected router: Router, private auth: AngularFireAuth) {
 
   }
 
@@ -30,7 +26,13 @@ export class LoginFormComponent implements OnInit {
     this.messages = [];
     this.submitted = true;
 
-    console.log("working");
+    this.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
+      .then((user) => {
+        console.log(user);
+        this.router.navigate(['']);
+      });
+
+    console.log(this.user);
   }
 
 

@@ -10,4 +10,12 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "AIzaSyCFl2XlnA1NK0xysJjhlIKTJymqzCkA-UU",
+    authDomain: "stanplus-todoing.firebaseapp.com",
+    projectId: "stanplus-todoing",
+    storageBucket: "stanplus-todoing.appspot.com",
+    messagingSenderId: "602565812555",
+    appId: "1:602565812555:web:2cb06be33bf959e5c848ce"
+  },
 };

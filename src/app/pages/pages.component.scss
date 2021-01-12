@@ -1,5 +1,23 @@
 @import '../@theme/styles/themes';
 
+
+.companyLogo {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #d1d1d1;
+  //margin: -180px 0 35px;
+}
+
+
+.companyLogo span:first-child {
+  color: #ff9090;
+}
+
+nb-layout-column {
+  background-color: white;
+}
+
+
 @include nb-install-component() {
   ::ng-deep router-outlet + * {
     display: block;

@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'register-form',
+  selector: 'ngx-register-form',
   templateUrl: './register-form.component.html',
-  styleUrls: ['./register-form.component.scss']
+  styleUrls: ['./register-form.component.scss'],
 })
 export class RegisterFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private fbAuth: AngularFireAuth, private router: Router) { }
 
-    errors: string[] = [];
+  errors: string[] = [];
   messages: string[] = [];
   user: any = {};
   submitted: boolean = false;
@@ -22,8 +24,10 @@ export class RegisterFormComponent implements OnInit {
     this.messages = [];
     this.submitted = true;
 
-    console.log("working");
+    this.fbAuth.createUserWithEmailAndPassword(this.user.email, this.user.password)
+      .then((user) => {
+        console.log(user);
+        this.router.navigate(['']);
+      });
   }
-
-
 }

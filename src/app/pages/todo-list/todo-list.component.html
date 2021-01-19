@@ -1,1 +1,17 @@
-<p>todo-list works!</p>
+<div class="todo-list-column">
+  <nb-tabset (changeTab)="tabChanged($event.tabTitle)" fullWidth>
+    <nb-tab tabTitle="All">
+      <ngx-tasks-for-date
+      [tabSelected]="tabSelected"></ngx-tasks-for-date>
+    </nb-tab>
+    <nb-tab tabTitle="Today">
+      <ngx-tasks-for-date></ngx-tasks-for-date>
+    </nb-tab>
+    <nb-tab tabTitle="This week">
+      <ngx-tasks-for-date></ngx-tasks-for-date>
+    </nb-tab>
+    <nb-tab tabTitle="This month">
+      <ngx-tasks-for-date></ngx-tasks-for-date>
+    </nb-tab>
+  </nb-tabset>
+</div>

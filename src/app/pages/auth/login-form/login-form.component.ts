@@ -8,11 +8,13 @@ import {Router} from '@angular/router';
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent implements OnInit {
+  private showErrors: boolean;
 
 
   ngOnInit(): void {
   }
   errors: string[] = [];
+  backendError: string;
   messages: string[] = [];
   user: any = {};
   submitted: boolean = false;
@@ -22,17 +24,20 @@ export class LoginFormComponent implements OnInit {
   }
 
   login(): void {
+    this.showErrors = false;
+    this.backendError = '';
     this.errors = [];
     this.messages = [];
     this.submitted = true;
 
     this.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
       .then((user) => {
-        console.log(user);
         this.router.navigate(['']);
+      }).catch(err => {
+        this.backendError = err.message;
+        this.showErrors = true;
       });
 
-    console.log(this.user);
   }
 
 

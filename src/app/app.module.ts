@@ -11,32 +11,32 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import {
-  NbChatModule,
-  NbDatepickerModule,
-  NbDialogModule, NbLayoutModule,
-  NbMenuModule,
-  NbSidebarModule,
-  NbToastrModule,
-  NbWindowModule,
-} from '@nebular/theme';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
+import {NbMenuModule} from '@nebular/theme';
+import { FireFormDirective } from './directives/fire-form.directive';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FireFormDirective],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule,
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    NbMenuModule.forRoot(),
   ],
   bootstrap: [AppComponent],
+  exports: [
+    FireFormDirective,
+  ],
 })
 export class AppModule {
 }

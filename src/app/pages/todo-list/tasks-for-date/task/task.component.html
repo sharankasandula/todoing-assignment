@@ -1,0 +1,85 @@
+<form [formGroup]="taskForm" ngxFireForm [path]="'tasks/' + task.taskId" (stateChange)="changeHandler($event)">
+  <div class="new-task-input-container"
+       (mouseover)="showEditTaskIcons=true"
+       (mouseout)="showEditTaskIcons=false">
+    <div class="task-description-input">
+      <nb-checkbox formControlName="taskFinished"></nb-checkbox>
+      <input
+        type="text"
+        formControlName="description"
+        placeholder="Add new task"
+        class="new-task-input"
+      />
+
+      <div class="task-time-input"
+           [hidden]="!toggleTimePickerInput"
+           [style.visibility]="showEditTaskIcons ? 'visible' : 'hidden'">
+        <div>
+          <label for="hours">hrs</label>
+          <input
+            nbInput
+            id="hours"
+            type="number"
+            min="0"
+            max="24"
+            formControlName="timeHours"
+            class="hours"
+          />
+        </div>
+        <div>
+          <label for="mins">mins</label>
+          <input
+            #taskDescription
+            nbInput
+            id="mins"
+            type="number"
+            min="0"
+            max="60"
+            formControlName="timeMins"
+            class="minutes"/>
+        </div>
+      </div>
+      <nb-icon
+        [hidden]="!showEditTaskIcons"
+        (click)="toggleTimePicker()"
+        icon="clock"
+        class="pick-time"
+        aria-label="Pick time">
+      </nb-icon>
+      <button
+        nbButton
+        ghost
+        [style.visibility]="showEditTaskIcons ? 'visible' : 'hidden'"
+        [nbContextMenu]="attachments"
+        nbContextMenuTrigger="hover">
+        <nb-icon
+          icon="plus-outline"
+          class="add-attachments"
+          aria-label="Attachments"
+        ></nb-icon>
+      </button>
+      <div class="d-flex task-time"
+           *ngIf="taskForm.get('timeHours').value && taskForm.get('timeMins').value && !showEditTaskIcons"
+           >
+        <div>{{taskForm.get('timeHours').value}}:{{taskForm.get('timeMins').value }}</div>
+      </div>
+
+      <nb-icon
+        [hidden]="!showEditTaskIcons"
+        icon="trash"
+        class="delete-task-icon"
+        (click)="deleteTask()"
+        aria-label="Attachments"
+      ></nb-icon>
+    </div>
+
+
+    <div class="attachments">
+      <ngx-task-attachments
+        [taskId]="task.taskId">
+      </ngx-task-attachments>
+    </div>
+
+
+  </div>
+</form>

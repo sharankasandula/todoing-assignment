@@ -1,0 +1,15 @@
+<div class="header">
+  <ngx-current-date
+  ></ngx-current-date>
+
+  <!--  <div class="tasks-completed">-->
+  <!--    4/5-->
+  <!--  </div>-->
+</div>
+
+<div *ngFor="let task of tasks | async ">
+  <ngx-task
+    [task]="task"
+  ></ngx-task>
+</div>
+<button nbButton ghost fullWidth (click)="addNewTask()">Add new task</button>

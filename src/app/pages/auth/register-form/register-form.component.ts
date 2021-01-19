@@ -26,7 +26,6 @@ export class RegisterFormComponent implements OnInit {
 
     this.fbAuth.createUserWithEmailAndPassword(this.user.email, this.user.password)
       .then((user) => {
-        console.log(user);
         this.router.navigate(['']);
       });
   }

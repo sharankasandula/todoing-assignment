@@ -1,5 +1,8 @@
 @import '../@theme/styles/themes';
 
+a {
+  text-decoration: none;
+}
 
 .companyLogo {
   font-size: 20px;
@@ -33,4 +36,26 @@ nb-layout-column {
       }
     }
   }
+}
+
+.user-profile-photo {
+  width: 35px;
+  height: 35px;
+  background-color: #b1aeb3;
+  margin: 10px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.user-section {
+  align-items: center;
+}
+
+nb-layout-header /deep/ nav {
+  width: 100%;
+  justify-content: space-between!important;
 }

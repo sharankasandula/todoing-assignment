@@ -5,13 +5,13 @@
 
 $nb-themes: nb-register-theme((
   layout-padding-top: 2.25rem,
-  color-primary-100: #FEEBE0,
-  color-primary-200: #FED2C2,
-  color-primary-300: #FEB3A3,
-  color-primary-400: #FD968C,
-  color-primary-600: #D94B57,
-  color-primary-700: #B6334A,
-  color-primary-800: #92203E,
+  color-primary-100: #feebe0,
+  color-primary-200: #fed2c2,
+  color-primary-300: #feb3a3,
+  color-primary-400: #fd968c,
+  color-primary-600: #d94b57,
+  color-primary-700: #b6334a,
+  color-primary-800: #92203e,
   color-primary-900: #791336,
   color-primary-500: #ff9090,
 
@@ -24,6 +24,14 @@ $nb-themes: nb-register-theme((
   input-tiny-placeholder-text-font-weight: 700,
 
   header-shadow: none,
+
+  tabset-tab-active-background-color	: #ff9090,
+  tabset-tab-focus-background-color	: #ff9090,
+  tabset-tab-hover-background-color	: #feebe0,
+  tabset-tab-active-text-color: white,
+  tabset-border-radius: 50px,
+  tabset-tab-underline-width: 0,
+  tabset-tab-text-transform: capitalize,
 
   layout-background-color: white,
 

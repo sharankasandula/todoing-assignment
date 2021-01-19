@@ -1,0 +1,26 @@
+nb-icon {
+  color: gray;
+  padding-right: 5px;
+  margin-left: 3px;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.files, .links a {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.link-input {
+  border-style: none;
+  border-radius: 0;
+  width: 25rem;
+}
+
+.link-section {
+  align-items: center;
+}
+
+textarea {
+  width: 25rem;
+}

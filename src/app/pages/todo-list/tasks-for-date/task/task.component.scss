@@ -1,0 +1,95 @@
+:host {
+
+}
+
+nb-icon {
+  color: #8f9bb3;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.new-task-input {
+  border-style: none;
+  border-radius: 0;
+  width: 100%;
+}
+
+input.new-task-input:focus {
+  outline: none;
+}
+
+//.add-attachments {
+//  border-style: none none solid;
+//  border-color: gray;
+//}
+
+.task-description-input {
+  padding-top: 5px;
+  display: flex;
+  align-items: center;
+
+  nb-checkbox {
+    padding-right: 15px;
+  }
+
+  input {
+    font-weight: 600;
+  }
+}
+
+.new-task-input-container {
+  border-style: none none solid;
+  border-color: #e4e9f2;
+  border-radius: 0;
+}
+
+.delete-task-icon {
+  //position: relative;
+  //margin-right: -21px;
+}
+
+.task-time-input {
+  //position: absolute;
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  border: 1px solid #e4e9f2;
+  border-radius: 10px;
+  position: relative;
+  background-color: white;
+  margin-bottom: -100px;
+  z-index: 30;
+  overflow: visible;
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  input {
+    width: 44px;
+    padding: 7px 9px;
+    margin-left: 2px;
+    position: relative;
+  }
+
+  label {
+    font-weight: 600;
+    color: gray;
+    font-size: 14px;
+  }
+
+}
+
+.task-time {
+  font-weight: 600;
+  width: 40px;
+  color: gray;
+  min-width: 40px;
+  padding-left: 3px;
+  font-size: 14px;
+}

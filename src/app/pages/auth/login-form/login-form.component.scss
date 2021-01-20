@@ -1,0 +1,29 @@
+@import '../auth.component';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align-last: center;
+  width: 400px;
+  height: 48px;
+  ::placeholder {
+  font-weight: 700;
+}
+
+  input {
+    margin: 10px 0;
+    max-width: 400px!important;
+    width: 100%;
+    padding: 13px;
+  }
+
+  button {
+    margin: 10px 0;
+    border-radius: 25px;
+    color: white;
+    background-color: #ff9090;
+  }
+}
+
+

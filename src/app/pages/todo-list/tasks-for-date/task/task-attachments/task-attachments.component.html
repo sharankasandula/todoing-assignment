@@ -1,0 +1,35 @@
+<form [formGroup]="attachmentsForm" ngxFireForm [path]="'tasks/' + this.taskId + '/attachments/attachmentObjects'"
+      (stateChange)="changeHandler($event)">
+
+  <div *ngIf="attachments?.files" class="files d-flex align-middle">
+    <nb-icon icon="file"></nb-icon>
+    <div *ngFor="let file of attachmentsForm.get('taskFiles')['controls']">
+      <a class="ml-2" href="link">{{ file.value }}</a>
+    </div>
+  </div>
+
+  <div class="links" *ngIf="attachmentsForm.get('taskLinks')">
+    <div class=" d-flex link-section" *ngFor="let link of attachmentsForm.get('taskLinks')['controls'];let i = index">
+      <nb-icon icon="link"></nb-icon>
+      <a href="link" target="_blank" class="ml-2">{{ link.value}}</a>
+    </div>
+    <div class="d-flex">
+      <input type="url"
+             nbInput
+             #linkInput
+             fieldSize="small"
+             class="link-input my-2"
+             fullWidth
+             placeholder="Paste link">
+      <button nbButton ghost size="small" (click)="addLink(linkInput.value)"> Add</button>
+    </div>
+  </div>
+
+  <div *ngIf="attachments?.taskNotes" class="notes d-flex align-middle">
+    <nb-icon icon="book-open"></nb-icon>
+    <div>
+      <textarea class="ml-2 mb-1 notepad" nbInput fullWidth placeholder="Notes"></textarea>
+    </div>
+  </div>
+</form>
+<!--{{attachments.attachmentId}}-->

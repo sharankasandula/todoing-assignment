@@ -1,0 +1,29 @@
+nb-layout-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  flex-direction: column;
+}
+
+
+.companyLogo {
+  font-size: 70px;
+  font-weight: bolder;
+  color: #d1d1d1;
+  margin: -180px 0 35px;
+}
+
+
+.companyLogo span:first-child {
+  color: #ff9090;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none!important;
+}

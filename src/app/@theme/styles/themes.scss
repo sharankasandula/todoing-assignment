@@ -1,0 +1,111 @@
+// @nebular theming framework
+@import '~@nebular/theme/styles/theming';
+// @nebular out of the box themes
+@import '~@nebular/theme/styles/themes';
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 2.25rem,
+  color-primary-100: #feebe0,
+  color-primary-200: #fed2c2,
+  color-primary-300: #feb3a3,
+  color-primary-400: #fd968c,
+  color-primary-600: #d94b57,
+  color-primary-700: #b6334a,
+  color-primary-800: #92203e,
+  color-primary-900: #791336,
+  color-primary-500: #ff9090,
+
+
+  color-default-500: #d1d1d1,
+  color-secondary-500: #d1d1d1,
+  color-success-500: #2eb12a,
+  color-warning-500: #ff9e00,
+
+  input-tiny-placeholder-text-font-weight: 700,
+
+  header-shadow: none,
+
+  tabset-tab-active-background-color	: #ff9090,
+  tabset-tab-focus-background-color	: #ff9090,
+  tabset-tab-hover-background-color	: #feebe0,
+  tabset-tab-active-text-color: white,
+  tabset-border-radius: 50px,
+  tabset-tab-underline-width: 0,
+  tabset-tab-text-transform: capitalize,
+
+  layout-background-color: white,
+
+  input-outline-color: white,
+  input-basic-background-color: #f7f7f7,
+  button-filled-text-transform: capitalize,
+  color-primary-transparent-100: rgba(253, 103, 103, 0.08),
+  color-primary-transparent-200: rgba(253, 103, 103, 0.16),
+  color-primary-transparent-300: rgba(253, 103, 103, 0.24),
+  color-primary-transparent-400: rgba(253, 103, 103, 0.32),
+  color-primary-transparent-500: rgba(253, 103, 103, 0.4),
+  color-primary-transparent-600: rgba(253, 103, 103, 0.48),
+  menu-item-icon-margin: 0 0.5rem 0 0,
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+  select-min-width: 6rem,
+  slide-out-background: #f7f9fc,
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+), default, default);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 2.25rem,
+  menu-item-icon-margin: 0 0.5rem 0 0,
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+  select-min-width: 6rem,
+  slide-out-background: #252547,
+  slide-out-shadow-color: 2px 0 3px #29157a,
+  slide-out-shadow-color-rtl: -2px 0 3px #29157a,
+), cosmic, cosmic);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 2.25rem,
+  menu-item-icon-margin: 0 0.5rem 0 0,
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+  select-min-width: 6rem,
+  slide-out-background: linear-gradient(270deg, #edf1f7 0%, #e4e9f2 100%),
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+), corporate, corporate);
+
+$nb-themes: nb-register-theme((
+  layout-padding-top: 2.25rem,
+  menu-item-icon-margin: 0 0.5rem 0 0,
+  card-height-tiny: 13.5rem,
+  card-height-small: 21.1875rem,
+  card-height-medium: 28.875rem,
+  card-height-large: 36.5625rem,
+  card-height-giant: 44.25rem,
+  card-margin-bottom: 1.875rem,
+  card-header-with-select-padding-top: 0.5rem,
+  card-header-with-select-padding-bottom: 0.5rem,
+  select-min-width: 6rem,
+  slide-out-background: linear-gradient(270deg, #222b45 0%, #151a30 100%),
+  slide-out-shadow-color: 0 4px 14px 0 #8f9bb3,
+  slide-out-shadow-color-rtl: 0 4px 14px 0 #8f9bb3,
+), dark, dark);
